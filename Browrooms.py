@@ -163,10 +163,10 @@ class Browser(wx.Frame):
         self.historyPointer:int = -1
 
         # Load and resize images for navigation buttons
-        img_back = wx.Bitmap("img/back.png", wx.BITMAP_TYPE_PNG).ConvertToImage().Scale(width, height).ConvertToBitmap()
-        img_forward = wx.Bitmap("img/forward.png", wx.BITMAP_TYPE_PNG).ConvertToImage().Scale(width, height).ConvertToBitmap()
-        img_refresh = wx.Bitmap("img/refresh.png", wx.BITMAP_TYPE_PNG).ConvertToImage().Scale(width, height).ConvertToBitmap()
-        img_home = wx.Bitmap("img/home.png", wx.BITMAP_TYPE_PNG).ConvertToImage().Scale(width, height).ConvertToBitmap()
+        img_back = wx.Bitmap("components/img/back.png", wx.BITMAP_TYPE_PNG).ConvertToImage().Scale(width, height).ConvertToBitmap()
+        img_forward = wx.Bitmap("components/img/forward.png", wx.BITMAP_TYPE_PNG).ConvertToImage().Scale(width, height).ConvertToBitmap()
+        img_refresh = wx.Bitmap("components/img/refresh.png", wx.BITMAP_TYPE_PNG).ConvertToImage().Scale(width, height).ConvertToBitmap()
+        img_home = wx.Bitmap("components/img/home.png", wx.BITMAP_TYPE_PNG).ConvertToImage().Scale(width, height).ConvertToBitmap()
         
         # Create navigation buttons using resized images
         btn_back = wx.BitmapButton(self.panel, bitmap=img_back)
@@ -194,7 +194,7 @@ class Browser(wx.Frame):
         toolbar_sizer.AddStretchSpacer(1)
         
         # Load "Go" button image, resize, and create button
-        img_go = wx.Bitmap("img/search.png", wx.BITMAP_TYPE_PNG).ConvertToImage().Scale(width, height).ConvertToBitmap()
+        img_go = wx.Bitmap("components/img/search.png", wx.BITMAP_TYPE_PNG).ConvertToImage().Scale(width, height).ConvertToBitmap()
         btn_go = wx.BitmapButton(self.panel, bitmap=img_go)
         toolbar_sizer.Add(btn_go, 0, wx.ALL, 5)
         
@@ -210,7 +210,7 @@ class Browser(wx.Frame):
         #self.html_window = wx.html.HtmlWindow(self.panel, style=wx.NO_BORDER)
 
         # Load landing page content
-        with open('index.html', 'r') as html_content:
+        with open('components/home/index.html', 'r') as html_content:
             self.content = html_content.read()
         
         # Display initial content in the HTML window
