@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="backrooms-net">Backrooms-net</h1>
+    <p>A secure node based communications network. (Work in progress - Once I do my final audit of the code, it will be published)</p>
+    
+    <h2 id="what-is-backrooms-net-">What is Backrooms-net?</h2>
+    <p>
+      Backrooms-net is a project that I had envisioned while I was in high school, but put down since I didn&#39;t have enough programming knowledge to pull it off.
+      Backrooms-net at its core is meant to accept data from a client, encrypt and ensure a safe route to another client while communicating in a node-based network.
+      I am currently unhappy with the state of Tor, and other companies providing VPNs that ultimately spy on all of your traffic anyways. I am also particularly unhappy
+      with several central governments spending lots of time and money to track its citizens and deanonymize services we use.
+    </p>
+    
+    <h2 id="backrooms-net-features">Backrooms-net features</h2>
+    <ul>
+      <li>Dual layer full AES and RSA encryption of at-rest persistence data</li>
+      <li>Hardware identification (Using TPM in the future) to prevent physical data from being compromised</li>
+      <li>Zero/No Trust principles (I can trust you as far as I can throw you)</li>
+      <li>Node to Node full RSA-4092 encryption of all data with signatures and hash checks</li>
+      <li>Variable security levels. Routes can be customized for much higher security, or lower latency. Max level has Onion Routing.</li>
+      <li>Hardened against timing attacks. (Work in progress)</li>
+      <li>&quot;NPN&quot; (No package necessary) features allowing you to access the network with nothing but HTTP request</li>
+      <li>Signature spoofing (We look like an Apache2 server)</li>
+      <li>Route investigation and known entity avoiding network routines</li>
+      <li>Node network security features</li>
+    </ul>
+    
+    <h2 id="for-developers">For developers</h2>
+    <p>
+      I thought a long time about how to make this network as accessible as possible to as many people as possible because I am very passionate about this issue.
+    </p>
+    <p>
+      So far, all backrooms nodes have their own web server that you can direct GET and POST requests at. In theory, you can use the network with your browser alone to send messages to another client on the network.
+      However, for the most secure communications when developing an app to use this network, the minimum you will need is something to make HTTP requests, and encrypt data (Using RSA) to follow the Backrooms-net communications protocol.
+    </p>
+    
+    <h2 id="my-vision">My vision</h2>
+    <p>
+      I&#39;ve had this project in my head for a long time. If I can manage to stay motivated long enough, I just want to get this working and help as many people as possible. There is a massively high chance this won&#39;t go anywhere.
+      Hopefully, at the minimum, someone will find this code useful in some way.
+    </p>
+    <p>
+      Otherwise, I have a few use case programs I have ideas for to demonstrate how the network will work.
+      One is a desktop app similar to Discord with an accompanying Android app. It will be extremely interesting to see how that works out since your &quot;host&quot; service is technically a &quot;client&quot; or &quot;endpoint&quot; on the network just the same as people using it.
+      That means, if you didn&#39;t want to rely on one person hosting your chat app, you could always just host it yourself.
+    </p>
+    
+    <h2 id="would-you-like-to-know-more-">Would you like to know more?</h2>
+    <p>Visit the wiki section! :) (Wiki will be populated once code is published. Forgot to mention. Sorry!)</p>
+    
+    <h3 id="people-who-have-helped-so-far">People who have helped so far</h3>
+    <p>These people have helped by making suggestions on stream or helped find vulnerabilities. - </p>
+    <ul>
+      <li>The Gray Hatter - <a href="https://gr.ht/">https://gr.ht/</a> - &quot;For security... Don&#39;t lie, unless you can lie convincingly.&quot; (Web Server Spoofing suggestions)</li>
+      <li>innitfuN1 - Twitch - Brought up the Riemann hypothesis as a way to attack RSA.</li>
+    </ul>
+    
+    <form>
+      <input type="text">
+      <input type="submit" value="Submit">
+      <button>botons</button>
+    </form>
+  </body>
+</html>
